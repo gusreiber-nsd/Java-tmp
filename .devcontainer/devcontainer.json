@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "desktop-lite": {
-        "password": "vscode",
+        "password": " ",
         "webPort": "6080",
         "vncPort": "5901"
     }
