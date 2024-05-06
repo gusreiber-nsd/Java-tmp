@@ -1,27 +1,23 @@
 {
-	"name": "Java",
-	"image": "mcr.microsoft.com/devcontainers/java:1-21",
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "true",
-			"mavenVersion": "3.8.6",
-			"installGradle": "false"
-		}
-	},
-	"customizations": {
-		"vscode": {
-			"settings": {},
-			"extensions": [
-				"streetsidesoftware.code-spell-checker"
-			]
-		}
-	},
-	"mounts": [
-		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
-	],
-	"containerEnv": {
-		"DISPLAY": "host.docker.internal:0"
-	},
-	"postCreateCommand": "apt-get update && apt-get install -y libxext6 libxrender1 libxtst6 libxi6 libfreetype6 libfontconfig1"
+    "name": "Java with GUI",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "none",
+            "installMaven": "true",
+            "mavenVersion": "3.8.6",
+            "installGradle": "false"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+    "postCreateCommand": "Xvfb :99 -screen 0 1280x800x24 &",
+    "remoteUser": "vscode"
 }
