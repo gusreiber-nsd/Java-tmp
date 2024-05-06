@@ -5,7 +5,6 @@
 
 package com.mycompany.app;
 
-import java.awt.*;
 
 import javax.swing.JFrame;
 
