@@ -5,8 +5,16 @@
 
 package com.mycompany.app;
 
+import java.awt.*;
+
+import javax.swing.JFrame;
+
 public class App {
     public static void main(String[] args) {
+
+        JFrame jf = new JFrame();
+        jf.setVisible(true);
+
         System.out.println("Hello Remote World!");
     }
 }
