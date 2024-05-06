@@ -5,13 +5,14 @@
 
 package com.mycompany.app;
 
-
+import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class App {
     public static void main(String[] args) {
 
         JFrame jf = new JFrame();
+        jf.setSize(new Dimension(500,400));
         jf.setVisible(true);
 
         System.out.println("Hello Remote World!");
